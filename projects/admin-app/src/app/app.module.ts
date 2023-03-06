@@ -8,6 +8,9 @@ import { HomeComponent } from './home/home.component';
 import { AbstractService, SharedModule } from 'shared';
 import { AdminAbstractService } from './services/admin-abstract.service';
 import { AdminComponent } from './admin/admin.component';
+import { BaseModule } from 'projects/base/base.module';
+import { Base1Service } from 'projects/base/services/base1.service';
+import { AdminBase1Service } from './services/admin-base1.service';
 
 @NgModule({
   declarations: [
@@ -18,9 +21,10 @@ import { AdminComponent } from './admin/admin.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    SharedModule
+    SharedModule,
+    BaseModule
   ],
-  providers: [{ provide: AbstractService, useExisting: AdminAbstractService}],
+  providers: [{ provide: AbstractService, useExisting: AdminAbstractService}, {provide: Base1Service, useClass: AdminBase1Service}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

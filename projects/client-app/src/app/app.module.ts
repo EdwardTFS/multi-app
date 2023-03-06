@@ -7,6 +7,7 @@ import { HomeComponent } from './home/home.component';
 import { ClientComponent } from './client/client.component';
 import { AbstractService } from 'shared';
 import { ClientAbstractService } from './services/client-abstract.service';
+import { BaseModule } from 'projects/base/base.module';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { ClientAbstractService } from './services/client-abstract.service';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BaseModule
   ],
   providers: [{ provide: AbstractService, useClass: ClientAbstractService}],
   bootstrap: [AppComponent]
