@@ -27,6 +27,11 @@
             "inlineStyleLanguage": "scss",
             "assets": [
               "projects/admin-app/src/favicon.ico",
+              {
+                "glob": "**/*",
+                "input": "projects/base/assets/",
+                "output": "/assets/"
+              },
               "projects/admin-app/src/assets"
             ],
             "styles": [
@@ -124,6 +129,11 @@
             "inlineStyleLanguage": "scss",
             "assets": [
               "projects/client-app/src/favicon.ico",
+              {
+                "glob": "**/*",
+                "input": "projects/base/assets/",
+                "output": "/assets/"
+              },
               "projects/client-app/src/assets"
             ],
             "styles": [
